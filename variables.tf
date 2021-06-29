@@ -9,11 +9,11 @@ variable "subnets_cidr" {
 
 variable "azs" {
 	type    = list
-	default = ["eu-west-1a", "us-west-1b"]
+	default = ["eu-west-1a", "eu-west-1b"]
 }
 
 variable "aws_region" {
-	default = "us-east-1"
+	default = "eu-west-1"
 }
 
 variable "vpc_cidr" {
@@ -21,7 +21,7 @@ variable "vpc_cidr" {
 }
 
 variable "webservers_ami" {
-  default = "ami-0ff8a91507f77f867"
+  default = "ami-0f89681a05a3a9de7"
 }
 
 variable "instance_type" {
