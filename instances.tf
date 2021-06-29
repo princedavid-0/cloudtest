@@ -5,13 +5,7 @@ resource "aws_instance" "webservers" {
 	security_groups     = [aws_security_group.webservers.id]
 	subnet_id           = element(aws_subnet.test_public.*.id,count.index)
 	user_data           = file("install_httpd.sh")
-
-	metadata_options {
-		http_tokens = "required"
-	}	
-
     tags = {
 	  Name = "Server-${count.index}"
 	}
-
 }
