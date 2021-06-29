@@ -63,7 +63,7 @@ resource "aws_internet_gateway" "test_igw" {
 
 # Route table: attach Internet Gateway 
 resource "aws_route_table" "ig_route" {
-  vpc_id = "${aws_vpc.test_vpc.id}"
+  vpc_id = aws_vpc.test_vpc.id
 
   route {
     cidr_block = "0.0.0.0/0"
